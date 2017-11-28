@@ -1,0 +1,6 @@
+framework module Pods_gestIos {
+  umbrella header "Pods-gestIos-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/Views/CollectionViewCells/CategoryCollectionViewCell.swift"
+            timestampString = "532911048.921016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "category"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/Controllers/Products/AddProductViewController.swift"
+            timestampString = "532907232.788978"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AddProductViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of gestIos.AddProductViewController.videoCaptureDevice : Swift.Optional&lt;__ObjC.AVCaptureDevice&gt;"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Products/AddProductViewController.swift"
+                  timestampString = "532882177.299598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.AddProductViewController.videoCaptureDevice.getter : Swift.Optional&lt;__ObjC.AVCaptureDevice&gt;"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Products/AddProductViewController.swift"
+                  timestampString = "532882177.30169"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.AddProductViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; gestIos.AddProductViewController"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Products/AddProductViewController.swift"
+                  timestampString = "532882177.303265"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.AddProductViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;gestIos.AddProductViewController&gt;"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Products/AddProductViewController.swift"
+                  timestampString = "532882177.304815"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/Controllers/Products/ProductScanViewController.swift"
+            timestampString = "533482806.464345"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setupCamera()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
