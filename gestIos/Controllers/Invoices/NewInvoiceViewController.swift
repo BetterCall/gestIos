@@ -26,7 +26,6 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
         }
     }
 
-    
     // Outlets
 
     @IBOutlet weak var topView: UIView!
@@ -46,6 +45,7 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
         self.setupCamera()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -126,19 +126,39 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
     func findProduct( id: String ) {
         Api.Product.observeProduct(withId: id, onSuccess: { product in
             //self.updateProductInfo(product: product)
-            self.invoice.insert(product, at: 0 )
-            self.tableView.reloadData()
+         
             print("PRODUCT FOUND")
             
-            let alert = UIAlertController(title: "Suivant", message: "\(product.name) - \(product.price) ", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Suivant", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "\(product.name!) ", message: "\(product.price!) euros", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.cancel, handler:{ action in
+                // whatever else you need to do here
+                if (self.captureSession.isRunning == false) {
+                    self.captureSession.startRunning();
+                }
+            }))
+    
+            alert.addAction(UIAlertAction(title: "Confirmer", style: UIAlertActionStyle.default, handler:{ action in
+                // whatever else you need to do here
+                self.invoice.insert(product, at: 0 )
+                self.tableView.reloadData()
+                
+                if (self.captureSession.isRunning == false) {
+                    self.captureSession.startRunning();
+                }
+            }))
+            
             self.present(alert, animated: true, completion: nil)
+         
+
             
         } , onError: { boolean in
             // Product does not exist need to be created
               print("PRODUCT NOT FOUND")
         })
     }
+    
+  
 }
 
 
@@ -161,9 +181,18 @@ extension NewInvoiceViewController : UITableViewDataSource {
             
             return cell
     }
-    
-    
+
 }
 
+extension NewInvoiceViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("sup row")
+            self.invoice.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+}
 
 
