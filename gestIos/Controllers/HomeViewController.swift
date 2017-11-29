@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var goToInvoiceGestureRecognizer: UITapGestureRecognizer!
     
+    @IBOutlet var goToInvoiceListGestureRecognizer: UITapGestureRecognizer!
     // End Outlets
     
     // Actions
@@ -37,6 +38,11 @@ class HomeViewController: UIViewController {
     
     @IBAction func goToInvoiceAction(_ sender: Any) {
         performSegue(withIdentifier: "goToInvoiceVC", sender: nil)
+    }
+    
+    @IBAction func goToInvoiceListAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToInvoiceListVC", sender: nil)
+
     }
     
     

@@ -30,10 +30,10 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
 
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var productCountLabel: UILabel!
-    @IBOutlet weak var totalLabel: UILabel!
+
     
     @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var validateButton: UIButton!
+
     
     @IBOutlet weak var tableView: UITableView!
     // End Outlets
@@ -44,6 +44,7 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
         self.view.backgroundColor = UIColor.clear
         self.setupCamera()
         
+
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -71,7 +72,7 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
             total += price
         }
         
-        totalLabel.text = "\(total)"
+        self.title = "Total : \(total) €"
         productCountLabel.text = "\(invoice.count)"
         
     }

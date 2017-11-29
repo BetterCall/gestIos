@@ -24,7 +24,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     // Outlets
     @IBOutlet weak var productDetailView: UIView!
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var continueButton: UIButton!
+    //@IBOutlet weak var continueButton: UIButton!
     
     // End Outlets
     
@@ -41,7 +41,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
         if (captureSession.isRunning == false) {
             captureSession.startRunning();
         }
-        continueButton.isHidden = true
+        //continueButton.isHidden = true
     }
     
     func updateProductInfo( product : Product) {
@@ -104,7 +104,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     func findProduct( id: String ) {
         Api.Product.observeProduct(withId: id, onSuccess: { product in
             self.updateProductInfo(product: product)
-            self.continueButton.isHidden = false
+            //self.continueButton.isHidden = false
         } , onError: { boolean in
             // Product does not exist need to be created
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -120,7 +120,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
         
         if (captureSession.isRunning == false) {
             captureSession.startRunning();
-            continueButton.isHidden = true
+            //continueButton.isHidden = true
         }
         
     }
