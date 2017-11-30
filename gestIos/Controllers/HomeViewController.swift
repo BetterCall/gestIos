@@ -49,6 +49,8 @@ class HomeViewController: UIViewController {
     // End Actions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated:true);
      
         
 

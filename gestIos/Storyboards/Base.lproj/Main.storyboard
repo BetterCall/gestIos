@@ -13,7 +13,6 @@
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
-            <string>Avenir-BookOblique</string>
             <string>Avenir-HeavyOblique</string>
         </array>
     </customFonts>
@@ -21,7 +20,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="gestIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="gestIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -639,12 +638,28 @@
                                                 <color key="backgroundColor" red="0.00083425856430000001" green="0.70604753490000005" blue="0.66943854089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Confirmer"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="confirmButton_touchUpInside:" destination="Wdd-OL-NVd" eventType="touchUpInside" id="lsn-S2-H0W"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E07-Uy-j0O">
                                                 <rect key="frame" x="108.5" y="0.0" width="98.5" height="30"/>
                                                 <color key="backgroundColor" red="0.95196121929999999" green="0.43748819830000002" blue="0.41951859000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Annuler"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelButton_touchUpInside:" destination="Wdd-OL-NVd" eventType="touchUpInside" id="gIQ-uP-Pml"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -675,8 +690,12 @@
                         <viewLayoutGuide key="safeArea" id="CnK-ok-XbX"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="E07-Uy-j0O" id="YKV-eb-gI0"/>
+                        <outlet property="confirmButton" destination="gg2-Db-HdO" id="W6L-Nm-vE7"/>
                         <outlet property="productDetailView" destination="jPJ-o2-jle" id="M9G-8c-FhG"/>
                         <outlet property="productImageView" destination="c66-ji-Lg9" id="xwK-et-wTV"/>
+                        <outlet property="productNameLabel" destination="xJD-Yb-oDa" id="vg5-RD-Wqo"/>
+                        <outlet property="productStockLabel" destination="ZLf-ES-s1Z" id="VOG-va-9lE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pv-CB-b6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -896,36 +915,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-Sy-aT2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre d'articles : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64d-hF-UU2">
-                                        <rect key="frame" x="15" y="15" width="150" height="24"/>
-                                        <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2C9-pm-V7c">
-                                        <rect key="frame" x="161" y="16.5" width="9.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <rect key="frame" x="341" y="57" width="14" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="23"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre d'articles : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64d-hF-UU2">
+                                        <rect key="frame" x="131" y="57" width="214" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanner" translatesAutoresizingMaskIntoConstraints="NO" id="dOF-PA-dWR">
+                                        <rect key="frame" x="20" y="27" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="3kO-bz-NST"/>
+                                            <constraint firstAttribute="width" constant="90" id="Cok-7R-D2Z"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9519612193107605" green="0.43748819828033447" blue="0.41951858997344971" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2C9-pm-V7c" secondAttribute="trailing" constant="20" symbolic="YES" id="EIT-4Z-zwD"/>
-                                    <constraint firstItem="2C9-pm-V7c" firstAttribute="leading" secondItem="64d-hF-UU2" secondAttribute="trailing" constant="-4" id="FEn-ff-ckB"/>
-                                    <constraint firstItem="64d-hF-UU2" firstAttribute="leading" secondItem="s6k-Sy-aT2" secondAttribute="leading" constant="15" id="Ohj-6q-pM0"/>
-                                    <constraint firstAttribute="height" constant="55" id="RFU-s2-ROq"/>
-                                    <constraint firstItem="2C9-pm-V7c" firstAttribute="centerY" secondItem="64d-hF-UU2" secondAttribute="centerY" constant="1.25" id="eYQ-XW-MaP"/>
-                                    <constraint firstItem="64d-hF-UU2" firstAttribute="centerY" secondItem="s6k-Sy-aT2" secondAttribute="centerY" id="zsL-G6-U0O"/>
+                                    <constraint firstAttribute="height" constant="145" id="HFz-7C-u2B"/>
+                                    <constraint firstItem="64d-hF-UU2" firstAttribute="centerY" secondItem="dOF-PA-dWR" secondAttribute="centerY" id="KJ6-WH-79a"/>
+                                    <constraint firstItem="dOF-PA-dWR" firstAttribute="centerY" secondItem="s6k-Sy-aT2" secondAttribute="centerY" id="Qc3-Jz-mLi"/>
+                                    <constraint firstItem="dOF-PA-dWR" firstAttribute="leading" secondItem="s6k-Sy-aT2" secondAttribute="leading" constant="20" id="h2I-Xm-BAa"/>
+                                    <constraint firstAttribute="trailing" secondItem="2C9-pm-V7c" secondAttribute="trailing" constant="20" id="kwv-bn-MJV"/>
+                                    <constraint firstItem="2C9-pm-V7c" firstAttribute="leading" secondItem="64d-hF-UU2" secondAttribute="trailing" constant="-4" id="oTg-cv-3MQ"/>
+                                    <constraint firstItem="2C9-pm-V7c" firstAttribute="centerY" secondItem="64d-hF-UU2" secondAttribute="centerY" id="vze-Ws-v8s"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGX-Oh-3Bg">
-                                <rect key="frame" x="0.0" y="293" width="375" height="310"/>
+                                <rect key="frame" x="0.0" y="383" width="375" height="220"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GcL-tJ-aX7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewInvoiceProductTableViewCell" rowHeight="70" id="Z8Z-SJ-S4K" customClass="NewInvoiceProductTableViewCell" customModule="gestIos" customModuleProvider="target">
@@ -1003,9 +1030,12 @@
                         <constraints>
                             <constraint firstItem="aGX-Oh-3Bg" firstAttribute="top" secondItem="s6k-Sy-aT2" secondAttribute="bottom" constant="238" id="5Fk-mn-ron"/>
                             <constraint firstItem="s6k-Sy-aT2" firstAttribute="trailing" secondItem="QxO-nj-rab" secondAttribute="trailing" id="BMw-hH-h5v"/>
+                            <constraint firstItem="s6k-Sy-aT2" firstAttribute="top" secondItem="QxO-nj-rab" secondAttribute="top" id="Nxa-VP-zwG"/>
                             <constraint firstItem="aGX-Oh-3Bg" firstAttribute="bottom" secondItem="QxO-nj-rab" secondAttribute="bottom" id="Td1-MP-o7Y"/>
+                            <constraint firstItem="s6k-Sy-aT2" firstAttribute="trailing" secondItem="QxO-nj-rab" secondAttribute="trailing" id="fva-e3-NtD"/>
                             <constraint firstItem="s6k-Sy-aT2" firstAttribute="top" secondItem="QxO-nj-rab" secondAttribute="top" id="hIa-gp-fC6"/>
                             <constraint firstItem="s6k-Sy-aT2" firstAttribute="leading" secondItem="QxO-nj-rab" secondAttribute="leading" id="hnG-tQ-OWd"/>
+                            <constraint firstItem="s6k-Sy-aT2" firstAttribute="leading" secondItem="QxO-nj-rab" secondAttribute="leading" id="otW-KB-Ia4"/>
                             <constraint firstItem="aGX-Oh-3Bg" firstAttribute="trailing" secondItem="QxO-nj-rab" secondAttribute="trailing" id="oxx-uQ-XvQ"/>
                             <constraint firstItem="s6k-Sy-aT2" firstAttribute="trailing" secondItem="QxO-nj-rab" secondAttribute="trailing" id="qZH-Y6-psO"/>
                             <constraint firstItem="s6k-Sy-aT2" firstAttribute="top" secondItem="QxO-nj-rab" secondAttribute="top" id="xOt-gd-bav"/>
@@ -1018,6 +1048,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Valider" id="5yP-kj-uYu">
                             <connections>
                                 <action selector="validate_TouchUpInside:" destination="Lhw-V1-fDj" id="bNb-21-6lw"/>
+                                <segue destination="Rhr-1o-Na7" kind="show" identifier="goToPaiementVC" id="FJw-xn-NXK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1026,17 +1057,16 @@
                         <outlet property="productCountLabel" destination="2C9-pm-V7c" id="pkj-hW-zUG"/>
                         <outlet property="tableView" destination="GcL-tJ-aX7" id="xSG-FK-nnJ"/>
                         <outlet property="topView" destination="s6k-Sy-aT2" id="Gys-ah-sQF"/>
-                        <segue destination="Rhr-1o-Na7" kind="show" identifier="goToPaiementVC" id="mOO-0i-4jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnG-rh-Tqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="1021"/>
+            <point key="canvasLocation" x="1156" y="1020.5397301349326"/>
         </scene>
         <!--Close Invoice View Controller-->
         <scene sceneID="MlA-fT-ipb">
             <objects>
-                <viewController id="Rhr-1o-Na7" customClass="CloseInvoiceViewController" customModule="gestIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CloseInvoiceViewController" id="Rhr-1o-Na7" customClass="CloseInvoiceViewController" customModule="gestIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PLj-AA-B18">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1062,6 +1092,7 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.65490196078431373" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="jWX-Z4-F5v" secondAttribute="trailing" constant="20" id="HBl-Mx-UPm"/>
                                             <constraint firstItem="jWX-Z4-F5v" firstAttribute="centerY" secondItem="DJQ-bv-A45" secondAttribute="centerY" id="LLw-af-W3f"/>
@@ -1069,6 +1100,9 @@
                                             <constraint firstItem="Q0B-el-k74" firstAttribute="centerY" secondItem="DJQ-bv-A45" secondAttribute="centerY" id="dCZ-7V-VBz"/>
                                             <constraint firstItem="jWX-Z4-F5v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DJQ-bv-A45" secondAttribute="leading" constant="20" symbolic="YES" id="fH3-hi-UC2"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Frs-gk-VPm" appends="YES" id="eJA-xj-Fik"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jC2-2O-Mp2">
                                         <rect key="frame" x="0.0" y="204.5" width="375" height="194"/>
@@ -1088,6 +1122,7 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.074509803921568626" green="0.65490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="Kex-cO-K4e" firstAttribute="leading" secondItem="jC2-2O-Mp2" secondAttribute="leading" constant="56" id="8N4-kp-NWG"/>
                                             <constraint firstItem="JnU-9O-5ZP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jC2-2O-Mp2" secondAttribute="leading" constant="20" symbolic="YES" id="EPu-qY-Qwh"/>
@@ -1095,18 +1130,21 @@
                                             <constraint firstItem="JnU-9O-5ZP" firstAttribute="centerY" secondItem="jC2-2O-Mp2" secondAttribute="centerY" id="m4D-Kd-Oc7"/>
                                             <constraint firstAttribute="trailing" secondItem="JnU-9O-5ZP" secondAttribute="trailing" constant="20" id="tp0-e3-aca"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="w8o-Yq-OIg" appends="YES" id="Jye-tC-Xgs"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiE-JZ-eVv">
                                         <rect key="frame" x="0.0" y="408.5" width="375" height="194.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chèque" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-Yq-NJM">
-                                                <rect key="frame" x="261" y="79.5" width="94" height="36"/>
+                                                <rect key="frame" x="261" y="80" width="94" height="36"/>
                                                 <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheques" translatesAutoresizingMaskIntoConstraints="NO" id="emo-Oj-48y">
-                                                <rect key="frame" x="20" y="53" width="105" height="90"/>
+                                                <rect key="frame" x="20" y="52.5" width="105" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="LYp-Pf-K8H"/>
                                                     <constraint firstAttribute="height" constant="90" id="wYx-T5-QKG"/>
@@ -1114,6 +1152,7 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.92941176470588238" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="emo-Oj-48y" firstAttribute="leading" secondItem="tiE-JZ-eVv" secondAttribute="leading" constant="20" id="6jb-SH-sID"/>
                                             <constraint firstItem="dbd-Yq-NJM" firstAttribute="centerY" secondItem="tiE-JZ-eVv" secondAttribute="centerY" id="JDw-wL-lmZ"/>
@@ -1121,6 +1160,9 @@
                                             <constraint firstItem="emo-Oj-48y" firstAttribute="centerY" secondItem="tiE-JZ-eVv" secondAttribute="centerY" id="mwb-7i-Od8"/>
                                             <constraint firstItem="dbd-Yq-NJM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tiE-JZ-eVv" secondAttribute="leading" constant="20" symbolic="YES" id="po5-V6-Er2"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Kxe-FM-e1y" appends="YES" id="atP-mt-6v6"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1145,10 +1187,34 @@
                         <viewLayoutGuide key="safeArea" id="Z9j-vK-Upq"/>
                     </view>
                     <navigationItem key="navigationItem" id="E9I-32-F0H">
-                        <barButtonItem key="rightBarButtonItem" title="Annuler" id="wGb-08-qOc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Annuler" id="wGb-08-qOc">
+                            <connections>
+                                <action selector="cancelInvoice:" destination="Rhr-1o-Na7" id="S90-xM-UU3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cardPaymentGestureRecognizer" destination="w8o-Yq-OIg" id="IkD-nu-Bw9"/>
+                        <outlet property="cashPaymentGestureRecognizer" destination="Frs-gk-VPm" id="8BA-de-x6V"/>
+                        <outlet property="checkPaymentGestureRecognizer" destination="Kxe-FM-e1y" id="v0X-hB-p1C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgQ-yV-Sf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Frs-gk-VPm">
+                    <connections>
+                        <action selector="cashPaymentAction:" destination="Rhr-1o-Na7" id="P3F-cU-x2Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="w8o-Yq-OIg">
+                    <connections>
+                        <action selector="cardPaymentAction:" destination="Rhr-1o-Na7" id="HbR-8g-77R"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Kxe-FM-e1y">
+                    <connections>
+                        <action selector="checkPaymentAction:" destination="Rhr-1o-Na7" id="u2j-eO-dot"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2014" y="1021"/>
         </scene>

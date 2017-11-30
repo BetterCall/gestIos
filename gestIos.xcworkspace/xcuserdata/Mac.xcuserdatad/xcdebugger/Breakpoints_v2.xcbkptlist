@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Products/ProductScanViewController.swift"
-            timestampString = "533681126.601757"
+            timestampString = "533720378.406066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "setupCamera()"
             landmarkType = "7">
          </BreakpointContent>

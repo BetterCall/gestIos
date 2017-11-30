@@ -11,6 +11,23 @@ import AVFoundation
 
 class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate {
     
+    var product : Product?
+    // Outlets
+    @IBOutlet weak var productDetailView: UIView!
+    @IBOutlet weak var productImageView: UIImageView!
+    
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productStockLabel: UILabel!
+    
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
+    //@IBOutlet weak var continueButton: UIButton!
+    
+    // End Outlets
+    
+    
     let videoCaptureDevice = AVCaptureDevice.default(for: .video)
     let device = AVCaptureDevice.default(for: .video)
     //var videoCaptureDevice: AVCaptureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
@@ -21,21 +38,18 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     var captureSession = AVCaptureSession( )
     
     
-    // Outlets
-    @IBOutlet weak var productDetailView: UIView!
-    @IBOutlet weak var productImageView: UIImageView!
-    //@IBOutlet weak var continueButton: UIButton!
-    
-    // End Outlets
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.clear
         self.setupCamera()
-     
+        
+        disableButtons()
         // Do any additional setup after loading the view.
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         if (captureSession.isRunning == false) {
@@ -44,12 +58,24 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
         //continueButton.isHidden = true
     }
     
+    func  disableButtons( )  {
+        cancelButton.isEnabled = false
+        confirmButton.isEnabled = false
+    }
+    
+    func enableButtons( ) {
+        cancelButton.isEnabled = true
+        confirmButton.isEnabled = true
+    }
+    
     func updateProductInfo( product : Product) {
         
         if let imageUrlString = product.imageUrl {
             let photoUrl = URL(string: imageUrlString)
             productImageView.sd_setImage(with: photoUrl, placeholderImage: UIImage(named: "placeholderImg"))
             //nameLabel.text = "\(product!.name!)"
+            productNameLabel.text = product.name
+            productStockLabel.text = "Stock : \(product.stock!)"
         }
     }
 
@@ -103,8 +129,12 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     
     func findProduct( id: String ) {
         Api.Product.observeProduct(withId: id, onSuccess: { product in
+            self.product = product
             self.updateProductInfo(product: product)
             //self.continueButton.isHidden = false
+            
+            self.enableButtons()
+            
         } , onError: { boolean in
             // Product does not exist need to be created
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -116,11 +146,27 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     }
     
     // Actions
-    @IBAction func continueButton_touchUpInside(_ sender: Any) {
+    @IBAction func confirmButton_touchUpInside(_ sender: Any) {
         
         if (captureSession.isRunning == false) {
             captureSession.startRunning();
-            //continueButton.isHidden = true
+            disableButtons()
+        }
+        Api.Product.incrementStock(
+            productId: (product?.id!)!,
+            onSuccess: { p in
+                self.productStockLabel.text = "Stock : \(p.stock!)"
+            },
+            onError: { error in })
+       
+        
+    }
+    
+    @IBAction func cancelButton_touchUpInside(_ sender: Any) {
+        
+        if (captureSession.isRunning == false) {
+            captureSession.startRunning();
+            disableButtons()
         }
         
     }

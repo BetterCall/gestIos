@@ -14,12 +14,29 @@ import FirebaseDatabase
 class InvoiceApi  {
     var REF_INVOICE = Database.database().reference().child("invoices")
     
-    func createInvoice ( products : [Product] ,  payment : String  , onSuccess : @escaping( )-> Void   ) {
+    func createInvoice ( invoice : Invoice , onSuccess : @escaping( )-> Void   ) {
+        
+        // get product id
+        guard let products = invoice.products else {
+            return
+        }
+        var productsId =  [String : Any] ( )
+        for product in products {
+            productsId[product.id!] = true
+            if invoice.payment != "none" {
+                print("not cancelled")
+                Api.Product.decrementStock(productId: product.id!, onSuccess: {product in }, onError: { error in })
+            }
+            
+        }
+        
         // Get a key for a new Invoice
         let newInvoiceKey = REF_INVOICE.childByAutoId().key
         REF_INVOICE.child(newInvoiceKey).setValue([
-            "products" : products ,
-            "payment" : payment
+            "productsId" : productsId ,
+            "payment" : invoice.payment,
+            "total" : invoice.total ,
+            
             ])
         onSuccess( )
     }
@@ -46,5 +63,7 @@ class InvoiceApi  {
                 }
         })
     }
+    
+    
 }
 

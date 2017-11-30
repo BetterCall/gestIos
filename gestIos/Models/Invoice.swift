@@ -16,6 +16,7 @@ class Invoice {
     var products : [Product]?
     var payment : String?
     var state : String?
+    var total : Int?
     
 }
 
@@ -29,6 +30,7 @@ extension Invoice {
         invoice.products = data["products"] as? [Product]
         invoice.payment = data["payment"] as? String
         invoice.state = data["state"] as? String
+        invoice.total = data["total"] as? Int
         
         return invoice
     }

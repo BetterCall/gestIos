@@ -20,11 +20,12 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
     
     var captureSession = AVCaptureSession( )
     
-    var invoice : [Product] = [] {
+    var products : [Product] = [] {
         didSet {
             updateTopView( )
         }
     }
+    var total = 0
 
     // Outlets
 
@@ -71,16 +72,17 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
     *
     **/
     func updateTopView( ) {
-        var total = 0
-        for product in invoice {
+        var tot = 0
+        for product in products {
             guard let price = product.price else {
                 return
             }
-            total += price
+            tot += price
         }
         
-        self.title = "Total : \(total) €"
-        productCountLabel.text = "\(invoice.count)"
+        self.title = "Total : \(tot) €"
+        self.total = tot
+        productCountLabel.text = "\(products.count)"
         
     }
     
@@ -148,7 +150,7 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
     
             alert.addAction(UIAlertAction(title: "Confirmer", style: UIAlertActionStyle.default, handler:{ action in
                 // whatever else you need to do here
-                self.invoice.insert(product, at: 0 )
+                self.products.insert(product, at: 0 )
                 self.tableView.reloadData()
                 
                 if (self.captureSession.isRunning == false) {
@@ -170,12 +172,23 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
         if (captureSession.isRunning == true) {
             captureSession.stopRunning();
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let ProductFormVC = storyboard.instantiateViewController(withIdentifier: "ProductFormViewController") as! ProductFormViewController
-        ProductFormVC.productId = id
-        
-        self.navigationController?.pushViewController(ProductFormVC, animated: true)
+
+      
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goToPaiementVC") {
+            print("1111")
+            
+            let controller = segue.destination as! CloseInvoiceViewController
+            let invoice = Invoice.create(data: [ "products" : products , "total" : total ], key: "" )
+            controller.invoice = invoice
+            
+            
+        }
+    }
+    
+
     
 }
 
@@ -183,7 +196,7 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
 extension NewInvoiceViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return invoice.count
+        return products.count
     }
     
     
@@ -193,7 +206,7 @@ extension NewInvoiceViewController : UITableViewDataSource {
             
             let index = indexPath.row
             
-            cell.product = invoice[index]
+            cell.product = products[index]
         
             //cell.delegate = self
             
@@ -207,7 +220,7 @@ extension NewInvoiceViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("sup row")
-            self.invoice.remove(at: indexPath.row)
+            self.products.remove(at: indexPath.row)
             self.tableView.reloadData()
         }
     }

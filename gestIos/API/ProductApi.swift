@@ -58,6 +58,56 @@ class ProductApi  {
         })
     }
     
+    func decrementStock(productId: String, onSuccess: @escaping (Product) -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
+        let productRef = Api.Product.REF_PRODUCT.child(productId)
+        productRef.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            if var product = currentData.value as? [String : AnyObject] {
+                
+                var stock = product["stock"] as? Int ?? 0
+                //var likesCount = post["likesCount"] as? Int ?? 0
+                stock -= 1
+                product["stock"] = stock as AnyObject?
+                
+                currentData.value = product
+                return TransactionResult.success(withValue: currentData)
+            }
+            return TransactionResult.success(withValue: currentData)
+        }) { (error, committed, snapshot) in
+            if let error = error {
+                onError(error.localizedDescription)
+            }
+            if let dict = snapshot?.value as? [String: Any] {
+                let product = Product.create(data: dict, key: snapshot!.key)
+                onSuccess(product)
+            }
+        }
+    }
+    
+    func incrementStock(productId: String, onSuccess: @escaping (Product) -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
+        let productRef = Api.Product.REF_PRODUCT.child(productId)
+        productRef.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            if var product = currentData.value as? [String : AnyObject] {
+                
+                var stock = product["stock"] as? Int ?? 0
+                //var likesCount = post["likesCount"] as? Int ?? 0
+                stock += 1
+                product["stock"] = stock as AnyObject?
+                
+                currentData.value = product
+                return TransactionResult.success(withValue: currentData)
+            }
+            return TransactionResult.success(withValue: currentData)
+        }) { (error, committed, snapshot) in
+            if let error = error {
+                onError(error.localizedDescription)
+            }
+            if let dict = snapshot?.value as? [String: Any] {
+                let product = Product.create(data: dict, key: snapshot!.key)
+                onSuccess(product)
+            }
+        }
+    }
+    
   
 }
 
