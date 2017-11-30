@@ -10,6 +10,10 @@ import UIKit
 
 class CloseInvoiceViewController: UIViewController {
 
+    // Variables
+    var products = [Product]( )
+    
+    // End Variables
     // Outlets
     
     // End Outlets

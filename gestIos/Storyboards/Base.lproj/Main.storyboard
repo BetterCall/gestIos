@@ -1017,7 +1017,7 @@
                     <navigationItem key="navigationItem" id="n0O-6i-VmF">
                         <barButtonItem key="rightBarButtonItem" title="Valider" id="5yP-kj-uYu">
                             <connections>
-                                <segue destination="Rhr-1o-Na7" kind="show" id="qWk-eG-yxP"/>
+                                <action selector="validate_TouchUpInside:" destination="Lhw-V1-fDj" id="bNb-21-6lw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1026,6 +1026,7 @@
                         <outlet property="productCountLabel" destination="2C9-pm-V7c" id="pkj-hW-zUG"/>
                         <outlet property="tableView" destination="GcL-tJ-aX7" id="xSG-FK-nnJ"/>
                         <outlet property="topView" destination="s6k-Sy-aT2" id="Gys-ah-sQF"/>
+                        <segue destination="Rhr-1o-Na7" kind="show" identifier="goToPaiementVC" id="mOO-0i-4jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnG-rh-Tqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1099,13 +1100,13 @@
                                         <rect key="frame" x="0.0" y="408.5" width="375" height="194.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chèque" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-Yq-NJM">
-                                                <rect key="frame" x="261" y="80" width="94" height="36"/>
+                                                <rect key="frame" x="261" y="79.5" width="94" height="36"/>
                                                 <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheques" translatesAutoresizingMaskIntoConstraints="NO" id="emo-Oj-48y">
-                                                <rect key="frame" x="20" y="52.5" width="105" height="90"/>
+                                                <rect key="frame" x="20" y="53" width="105" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="LYp-Pf-K8H"/>
                                                     <constraint firstAttribute="height" constant="90" id="wYx-T5-QKG"/>
@@ -1149,7 +1150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgQ-yV-Sf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330" y="982"/>
+            <point key="canvasLocation" x="2014" y="1021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="URU-8Z-sdG">

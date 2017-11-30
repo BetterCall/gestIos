@@ -58,6 +58,13 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if (captureSession.isRunning == true) {
+            captureSession.stopRunning();
+        }
+        
+    }
+    
     /**
     *
     * Update information inside top view
@@ -159,7 +166,17 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
         })
     }
     
-  
+    @IBAction func validate_TouchUpInside(_ sender: Any) {
+        if (captureSession.isRunning == true) {
+            captureSession.stopRunning();
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ProductFormVC = storyboard.instantiateViewController(withIdentifier: "ProductFormViewController") as! ProductFormViewController
+        ProductFormVC.productId = id
+        
+        self.navigationController?.pushViewController(ProductFormVC, animated: true)
+    }
+    
 }
 
 

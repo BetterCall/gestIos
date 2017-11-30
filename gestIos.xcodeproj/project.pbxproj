@@ -34,6 +34,8 @@
 		043DD01A1FC39960006880FD /* HelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DD0191FC39960006880FD /* HelperService.swift */; };
 		043DD01C1FC730C1006880FD /* NewInvoiceProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DD01B1FC730C1006880FD /* NewInvoiceProductTableViewCell.swift */; };
 		045E4E441FCF44C800175A05 /* CloseInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E431FCF44C800175A05 /* CloseInvoiceViewController.swift */; };
+		045E4E461FCF548400175A05 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E451FCF548400175A05 /* Invoice.swift */; };
+		045E4E481FCF55A500175A05 /* InvoiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E471FCF55A500175A05 /* InvoiceApi.swift */; };
 		3EA8E91B9FD25EC1B3636B2B /* Pods_gestIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		043DD0191FC39960006880FD /* HelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperService.swift; sourceTree = "<group>"; };
 		043DD01B1FC730C1006880FD /* NewInvoiceProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceProductTableViewCell.swift; sourceTree = "<group>"; };
 		045E4E431FCF44C800175A05 /* CloseInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseInvoiceViewController.swift; sourceTree = "<group>"; };
+		045E4E451FCF548400175A05 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		045E4E471FCF55A500175A05 /* InvoiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceApi.swift; sourceTree = "<group>"; };
 		0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gestIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		142047A368E97DB7353BF627 /* Pods-gestIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.release.xcconfig"; sourceTree = "<group>"; };
 		BED16B8B05670D2A243239D6 /* Pods-gestIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				043DCFEB1FC2EFDA006880FD /* Api.swift */,
 				043DCFED1FC2F00B006880FD /* CategoryApi.swift */,
 				043DCFF51FC2F4A1006880FD /* ProductApi.swift */,
+				045E4E471FCF55A500175A05 /* InvoiceApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			children = (
 				043DCFF11FC2F0C4006880FD /* Category.swift */,
 				043DCFF31FC2F3FE006880FD /* Product.swift */,
+				045E4E451FCF548400175A05 /* Invoice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				043DD0051FC321FB006880FD /* NewInvoiceViewController.swift in Sources */,
 				043DCFEE1FC2F00B006880FD /* CategoryApi.swift in Sources */,
 				043DD01A1FC39960006880FD /* HelperService.swift in Sources */,
+				045E4E481FCF55A500175A05 /* InvoiceApi.swift in Sources */,
 				043DD0021FC31CF8006880FD /* ProductScanViewController.swift in Sources */,
 				043DD0161FC3974F006880FD /* StorageService.swift in Sources */,
 				043DD00C1FC3856F006880FD /* CategoryListViewController.swift in Sources */,
@@ -403,6 +410,7 @@
 				045E4E441FCF44C800175A05 /* CloseInvoiceViewController.swift in Sources */,
 				043DD0111FC392F0006880FD /* Extentions.swift in Sources */,
 				043DD00E1FC3859C006880FD /* CategoryFormViewController.swift in Sources */,
+				045E4E461FCF548400175A05 /* Invoice.swift in Sources */,
 				043DD01C1FC730C1006880FD /* NewInvoiceProductTableViewCell.swift in Sources */,
 				043BBE4D1FC2EC6500AF669F /* AppDelegate.swift in Sources */,
 				043DCFF21FC2F0C4006880FD /* Category.swift in Sources */,
