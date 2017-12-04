@@ -12,6 +12,11 @@ class ProductsViewController: UIViewController {
     
     var products =  [Product]( )
     var categories = [Category]( )
+    var store : Store? {
+        didSet {
+            self.title = store?.name
+        }
+    }
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +33,7 @@ class ProductsViewController: UIViewController {
         // Get all product
         loadProducts( )
         loadCategories( )
+        loadStore( )
         // Do any additional setup after loading the view.
     }
 
@@ -39,14 +45,16 @@ class ProductsViewController: UIViewController {
     func loadProducts( ) {
         Api.Product.observeProducts( onSuccess : { product in
             //
+            self.products.insert(product, at: 0)
+            self.tableView.reloadData( )
+            
             guard let categoryId = product.categoryId else {
                 return
             }
             // Get product category with category id
             Api.Category.observeCategory(withId: categoryId, onSuccess: { cat in
                 product.category = cat
-                self.products.insert(product, at: 0)
-                self.tableView.reloadData( )
+            
             })
             
         })
@@ -59,6 +67,25 @@ class ProductsViewController: UIViewController {
         })
     }
 
+    func loadStore( ) {
+        Api.Store.observeCurrentStore(onSuccess: { store in
+            self.store = store
+        }, onError: { error in
+            self.title = "Aucun store selectionné"
+        })
+    }
+    
+    @IBAction func ChangeStore_TouchUpInside(_ sender: Any) {
+     
+        
+        let storyboard = UIStoryboard(name: "Parameters", bundle: nil)
+        let storesVC = storyboard.instantiateViewController(withIdentifier: "StoresViewController") as! StoresViewController
+        
+        navigationController?.pushViewController(storesVC, animated: true)
+        
+    }
+    
+    
 }
 
 extension ProductsViewController : UITableViewDataSource {

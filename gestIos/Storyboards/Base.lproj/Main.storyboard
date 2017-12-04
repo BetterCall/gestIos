@@ -442,10 +442,10 @@
             </objects>
             <point key="canvasLocation" x="766" y="-1007"/>
         </scene>
-        <!--Invoices-->
+        <!--InvoicesViewController-->
         <scene sceneID="Za6-az-NOZ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="InvoicesViewController" storyboardName="Invoices" id="dpb-Xa-xZJ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="InvoicesViewController" storyboardName="Invoices" referencedIdentifier="InvoicesViewController" id="dpb-Xa-xZJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwm-oM-hRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1895.2" y="1020.5397301349326"/>

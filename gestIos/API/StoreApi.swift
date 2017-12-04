@@ -11,9 +11,14 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
+import SwiftKeychainWrapper
+
 class StoreApi  {
     var REF_STORES = Database.database().reference().child("stores")
     
+    func getStoreId ( ) -> String {
+        return KeychainWrapper.standard.string(forKey: "storeSelectedId")!
+    }
     func createCategory ( name : String,  imageData : Data  , onSuccess : @escaping( )-> Void   ) {
         // Get a key for a new Category.
         StorageService.uploadDataToServer(folder: "categories", imageData: imageData, onSuccess: {imageUrl in
@@ -27,6 +32,17 @@ class StoreApi  {
         onSuccess( )
     }
     
+    func observeCurrentStore( onSuccess : @escaping (Store) -> Void , onError : @escaping (String) -> Void  ) {
+        guard let storeSelectedId = KeychainWrapper.standard.string(forKey: "storeSelectedId") else {
+             onError ("Store not selected")
+            return
+        }
+        observeStore(withId: storeSelectedId, onSuccess: onSuccess )
+    }
+    
+    func setCurrentStore( storeId id : String ) {
+        let _: Bool = KeychainWrapper.standard.set(id, forKey: "storeSelectedId")
+    }
     
     func observeStores(onSuccess: @escaping (Store) -> Void) {
         REF_STORES.observe(

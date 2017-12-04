@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductScanViewController" id="Wdd-OL-NVd" customClass="ProductScanViewController" customModule="gestIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVb-tn-4ak">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1y-Dp-MDD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="145"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:jgN-sy-1bh:image" translatesAutoresizingMaskIntoConstraints="NO" id="jgN-sy-1bh">
                                         <rect key="frame" x="20" y="27" width="90" height="90"/>
@@ -47,7 +51,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPJ-o2-jle">
-                                <rect key="frame" x="0.0" y="403" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:c66-ji-Lg9:image" translatesAutoresizingMaskIntoConstraints="NO" id="c66-ji-Lg9">
                                         <rect key="frame" x="15" y="37.5" width="125" height="125"/>
@@ -142,7 +146,7 @@
                         <outlet property="productImageView" destination="c66-ji-Lg9" id="xwK-et-wTV"/>
                         <outlet property="productNameLabel" destination="xJD-Yb-oDa" id="vg5-RD-Wqo"/>
                         <outlet property="productStockLabel" destination="ZLf-ES-s1Z" id="VOG-va-9lE"/>
-                        <outlet property="storeNameLabel" destination="vls-WB-vLS" id="EJf-zq-fsb"/>
+                        <outlet property="storeNameLabel" destination="vls-WB-vLS" id="qd1-em-r9P"/>
                         <outlet property="topView" destination="f1y-Dp-MDD" id="c6Z-pK-Tfq"/>
                     </connections>
                 </viewController>

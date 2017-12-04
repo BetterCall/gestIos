@@ -11,6 +11,8 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
+import SwiftKeychainWrapper
+
 class InvoiceApi  {
     var REF_INVOICE = Database.database().reference().child("invoices")
     
@@ -25,7 +27,13 @@ class InvoiceApi  {
             productsId[product.id!] = true
             if invoice.payment != "none" {
                 print("not cancelled")
-                Api.Product.decrementStock(productId: product.id!, onSuccess: {product in }, onError: { error in })
+                
+                let storeId : String = KeychainWrapper.standard.string(forKey: "storeSelectedId")!
+                if storeId != ""  {
+                       Api.Stock.decrementStock(storeId : storeId ,productId: product.id!, onSuccess: {product in }, onError: { error in })
+                }
+                
+             
             }
             
         }

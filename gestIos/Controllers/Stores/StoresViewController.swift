@@ -22,6 +22,7 @@ class StoresViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         loadStores( )
         // Do any additional setup after loading the view.
     }
@@ -50,7 +51,6 @@ extension StoresViewController : UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
             
             let index = indexPath.row
-            
             cell.store = stores[index]
             
             //cell.delegate = self
@@ -59,4 +59,15 @@ extension StoresViewController : UITableViewDataSource {
     }
     
 }
+
+extension StoresViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            Api.Store.setCurrentStore(storeId: stores[indexPath.row].id!)
+        }
+    }
+}
+
+
 

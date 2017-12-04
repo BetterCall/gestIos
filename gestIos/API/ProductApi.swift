@@ -11,6 +11,8 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
+import SwiftKeychainWrapper
+
 class ProductApi  {
     var REF_PRODUCT = Database.database().reference().child("products")
     
@@ -34,11 +36,24 @@ class ProductApi  {
             .childAdded,
             with : { (snapshot) in
                 if let data = snapshot.value as? [String: Any] {
-                    let product = Product.create(data: data, key: snapshot.key)
-                    onSuccess(product)
+                    
+                    let storeId : String = KeychainWrapper.standard.string(forKey: "storeSelectedId")!
+                    if storeId != "" {
+                        var  product = Product.create(data: data, key: snapshot.key)
+                        
+                        Api.Stock.observeStock(storeId: storeId, productId: product.id!, onSuccess: { stock in
+                            product.stock = stock
+                            onSuccess( product )
+                            
+                        })
+                    }
+                  
+                    
                 }
         })
+                   
     }
+    
     
     func observeProduct(withId id: String, onSuccess: @escaping (Product) -> Void , onError : @escaping( Bool ) -> Void ) {
         REF_PRODUCT.child(id).observeSingleEvent(
@@ -46,8 +61,16 @@ class ProductApi  {
             with: { snapshot in
                 if snapshot.hasChildren() {
                     if let data = snapshot.value as? [String: Any] {
-                        let product = Product.create(data: data, key: snapshot.key)
-                        onSuccess(product)
+                        let storeId : String = KeychainWrapper.standard.string(forKey: "storeSelectedId")!
+                        if storeId != "" {
+                            let  product = Product.create(data: data, key: snapshot.key)
+                            
+                            Api.Stock.observeStock(storeId: storeId, productId: product.id!, onSuccess: { stock in
+                                product.stock = stock
+                                onSuccess( product )
+                                
+                            })
+                        }
                     } else {
                         onError(true)
                     }
@@ -58,56 +81,9 @@ class ProductApi  {
         })
     }
     
-    func decrementStock(productId: String, onSuccess: @escaping (Product) -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
-        let productRef = Api.Product.REF_PRODUCT.child(productId)
-        productRef.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
-            if var product = currentData.value as? [String : AnyObject] {
-                
-                var stock = product["stock"] as? Int ?? 0
-                //var likesCount = post["likesCount"] as? Int ?? 0
-                stock -= 1
-                product["stock"] = stock as AnyObject?
-                
-                currentData.value = product
-                return TransactionResult.success(withValue: currentData)
-            }
-            return TransactionResult.success(withValue: currentData)
-        }) { (error, committed, snapshot) in
-            if let error = error {
-                onError(error.localizedDescription)
-            }
-            if let dict = snapshot?.value as? [String: Any] {
-                let product = Product.create(data: dict, key: snapshot!.key)
-                onSuccess(product)
-            }
-        }
-    }
+
     
-    func incrementStock(productId: String, onSuccess: @escaping (Product) -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
-        let productRef = Api.Product.REF_PRODUCT.child(productId)
-        productRef.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
-            if var product = currentData.value as? [String : AnyObject] {
-                
-                var stock = product["stock"] as? Int ?? 0
-                //var likesCount = post["likesCount"] as? Int ?? 0
-                stock += 1
-                product["stock"] = stock as AnyObject?
-                
-                currentData.value = product
-                return TransactionResult.success(withValue: currentData)
-            }
-            return TransactionResult.success(withValue: currentData)
-        }) { (error, committed, snapshot) in
-            if let error = error {
-                onError(error.localizedDescription)
-            }
-            if let dict = snapshot?.value as? [String: Any] {
-                let product = Product.create(data: dict, key: snapshot!.key)
-                onSuccess(product)
-            }
-        }
-    }
-    
+  
   
 }
 

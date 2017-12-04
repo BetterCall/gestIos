@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Products/ProductScanViewController.swift"
-            timestampString = "534030017.932558"
+            timestampString = "534086615.898195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "setupCamera()"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Stores/StoresViewController.swift"
-            timestampString = "534030017.932683"
+            timestampString = "534086615.898262"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "loadStores()"
             landmarkType = "7">
             <Locations>
@@ -136,11 +136,11 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534028401.015339"
+                  timestampString = "534078875.257654"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
@@ -151,11 +151,11 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534028401.017362"
+                  timestampString = "534078875.260048"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Stores/StoresViewController.swift"
-            timestampString = "534030017.93276"
+            timestampString = "534086615.898312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "loadStores()"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Stores/StoresViewController.swift"
-            timestampString = "534030017.932808"
+            timestampString = "534086615.898357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "loadStores()"
             landmarkType = "7">
             <Locations>
@@ -200,11 +200,11 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534028401.031672"
+                  timestampString = "534078875.275469"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
                   offsetFromSymbolStart = "168">
                </Location>
                <Location
@@ -215,11 +215,11 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534028401.033803"
+                  timestampString = "534078875.277712"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
                   offsetFromSymbolStart = "380">
                </Location>
             </Locations>
@@ -232,13 +232,349 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Stores/StoresViewController.swift"
-            timestampString = "534030017.932851"
+            timestampString = "534086615.8984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "loadStores()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898447"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898495"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898583"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
+                  timestampString = "534078875.292221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1740">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
+                  timestampString = "534078875.294008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898674"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
+                  timestampString = "534078754.079192"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "2064">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
+                  timestampString = "534078754.080701"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.89881"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.898854"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/ProductApi.swift"
+            timestampString = "534086615.8989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
+                  timestampString = "534078754.092941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
+                  timestampString = "534078754.094501"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "2276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534086615.898948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "observeStock(storeId:productId:onSuccess:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534086615.898994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "observeStock(storeId:productId:onSuccess:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534086615.899041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "observeStock(storeId:productId:onSuccess:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewController.h"
+            timestampString = "534101398.582386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

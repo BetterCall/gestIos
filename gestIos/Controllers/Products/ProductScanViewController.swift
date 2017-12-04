@@ -12,10 +12,14 @@ import AVFoundation
 class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate {
     
     var product : Product?
+    var store : Store? {
+        didSet  {
+            updateStoreView( )
+        }
+    }
     // Outlets
     
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var storeNameLabel: UILabel!
     
     @IBOutlet weak var productDetailView: UIView!
     @IBOutlet weak var productImageView: UIImageView!
@@ -26,6 +30,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var storeNameLabel: UILabel!
     
     //@IBOutlet weak var continueButton: UIButton!
     
@@ -45,6 +50,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadSelectedStore ( )
         self.view.backgroundColor = UIColor.clear
         self.setupCamera()
         
@@ -58,6 +64,17 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
             captureSession.startRunning();
         }
         //continueButton.isHidden = true
+    }
+    func   loadSelectedStore ( ) {
+        Api.Store.observeCurrentStore(onSuccess: { store in
+                self.store = store
+            
+        }, onError: { error in
+            
+        })
+    }
+    func updateStoreView () {
+        storeNameLabel.text = store?.name
     }
     
     func  disableButtons( )  {
@@ -155,10 +172,15 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
             captureSession.startRunning();
             disableButtons()
         }
-        Api.Product.incrementStock(
+        
+        guard let storeId = store?.id else {
+            return
+        }
+        Api.Stock.incrementStock(
+            storeId : storeId , 
             productId: (product?.id!)!,
-            onSuccess: { p in
-                self.productStockLabel.text = "Stock : \(p.stock!)"
+            onSuccess: { stock in
+                self.productStockLabel.text = "Stock : \(stock)"
             },
             onError: { error in })
        
