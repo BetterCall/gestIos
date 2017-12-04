@@ -48,6 +48,7 @@
 		045E4E611FD4A5C700175A05 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E601FD4A5C700175A05 /* Scanner.storyboard */; };
 		045E4E631FD4A5FD00175A05 /* Stocks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E621FD4A5FD00175A05 /* Stocks.storyboard */; };
 		045E4E651FD4A66F00175A05 /* CheckOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E641FD4A66F00175A05 /* CheckOut.storyboard */; };
+		045E4E681FD5448400175A05 /* StoreCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E661FD5448400175A05 /* StoreCoreData.xcdatamodeld */; };
 		3EA8E91B9FD25EC1B3636B2B /* Pods_gestIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		045E4E601FD4A5C700175A05 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		045E4E621FD4A5FD00175A05 /* Stocks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stocks.storyboard; sourceTree = "<group>"; };
 		045E4E641FD4A66F00175A05 /* CheckOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CheckOut.storyboard; sourceTree = "<group>"; };
+		045E4E671FD5448400175A05 /* StoreCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoreCoreData.xcdatamodel; sourceTree = "<group>"; };
 		0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gestIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		142047A368E97DB7353BF627 /* Pods-gestIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.release.xcconfig"; sourceTree = "<group>"; };
 		BED16B8B05670D2A243239D6 /* Pods-gestIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				043BBE531FC2EC6500AF669F /* Assets.xcassets */,
 				043BBE581FC2EC6500AF669F /* Info.plist */,
 				043DCFE91FC2EF4F006880FD /* GoogleService-Info.plist */,
+				045E4E661FD5448400175A05 /* StoreCoreData.xcdatamodeld */,
 			);
 			path = gestIos;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				043DD0181FC397D7006880FD /* Config.swift in Sources */,
 				043DCFF61FC2F4A1006880FD /* ProductApi.swift in Sources */,
 				043DCFF41FC2F3FE006880FD /* Product.swift in Sources */,
+				045E4E681FD5448400175A05 /* StoreCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryann.gestIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -629,7 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryann.gestIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -655,6 +659,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		045E4E661FD5448400175A05 /* StoreCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				045E4E671FD5448400175A05 /* StoreCoreData.xcdatamodel */,
+			);
+			currentVersion = 045E4E671FD5448400175A05 /* StoreCoreData.xcdatamodel */;
+			path = StoreCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 043BBE411FC2EC6500AF669F /* Project object */;
 }

@@ -16,5 +16,6 @@ pod 'Firebase'
   pod 'KILabel'
   pod 'Alamofire'
   pod 'FirebaseInstanceID'
+  pod 'SwiftKeychainWrapper', '~> 3.0'
 
 end
