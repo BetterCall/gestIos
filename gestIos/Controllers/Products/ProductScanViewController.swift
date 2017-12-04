@@ -13,6 +13,10 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     
     var product : Product?
     // Outlets
+    
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var storeNameLabel: UILabel!
+    
     @IBOutlet weak var productDetailView: UIView!
     @IBOutlet weak var productImageView: UIImageView!
     
@@ -37,8 +41,6 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     
     var captureSession = AVCaptureSession( )
     
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +108,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
         }
         
         self.view.bringSubview(toFront: productDetailView)
+        self.view.bringSubview(toFront: topView)
         //self.view.bringSubview(toFront: followButton)
     }
     

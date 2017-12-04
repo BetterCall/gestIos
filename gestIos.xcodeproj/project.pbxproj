@@ -36,6 +36,18 @@
 		045E4E441FCF44C800175A05 /* CloseInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E431FCF44C800175A05 /* CloseInvoiceViewController.swift */; };
 		045E4E461FCF548400175A05 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E451FCF548400175A05 /* Invoice.swift */; };
 		045E4E481FCF55A500175A05 /* InvoiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E471FCF55A500175A05 /* InvoiceApi.swift */; };
+		045E4E4A1FD4870100175A05 /* InvoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E491FD4870100175A05 /* InvoicesViewController.swift */; };
+		045E4E4C1FD48A3F00175A05 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E4B1FD48A3F00175A05 /* InvoiceTableViewCell.swift */; };
+		045E4E4F1FD491E800175A05 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E4E1FD491E800175A05 /* StoresViewController.swift */; };
+		045E4E511FD4920400175A05 /* StoreFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E501FD4920400175A05 /* StoreFormViewController.swift */; };
+		045E4E531FD4975B00175A05 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E521FD4975B00175A05 /* Store.swift */; };
+		045E4E551FD4981800175A05 /* StoreApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E541FD4981800175A05 /* StoreApi.swift */; };
+		045E4E571FD49AA400175A05 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E561FD49AA400175A05 /* StoreTableViewCell.swift */; };
+		045E4E5D1FD4A3B500175A05 /* Parameters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E5C1FD4A3B500175A05 /* Parameters.storyboard */; };
+		045E4E5F1FD4A56300175A05 /* Invoices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E5E1FD4A56300175A05 /* Invoices.storyboard */; };
+		045E4E611FD4A5C700175A05 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E601FD4A5C700175A05 /* Scanner.storyboard */; };
+		045E4E631FD4A5FD00175A05 /* Stocks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E621FD4A5FD00175A05 /* Stocks.storyboard */; };
+		045E4E651FD4A66F00175A05 /* CheckOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E641FD4A66F00175A05 /* CheckOut.storyboard */; };
 		3EA8E91B9FD25EC1B3636B2B /* Pods_gestIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +83,18 @@
 		045E4E431FCF44C800175A05 /* CloseInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseInvoiceViewController.swift; sourceTree = "<group>"; };
 		045E4E451FCF548400175A05 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		045E4E471FCF55A500175A05 /* InvoiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceApi.swift; sourceTree = "<group>"; };
+		045E4E491FD4870100175A05 /* InvoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesViewController.swift; sourceTree = "<group>"; };
+		045E4E4B1FD48A3F00175A05 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
+		045E4E4E1FD491E800175A05 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
+		045E4E501FD4920400175A05 /* StoreFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFormViewController.swift; sourceTree = "<group>"; };
+		045E4E521FD4975B00175A05 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		045E4E541FD4981800175A05 /* StoreApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreApi.swift; sourceTree = "<group>"; };
+		045E4E561FD49AA400175A05 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		045E4E5C1FD4A3B500175A05 /* Parameters.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Parameters.storyboard; sourceTree = "<group>"; };
+		045E4E5E1FD4A56300175A05 /* Invoices.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Invoices.storyboard; sourceTree = "<group>"; };
+		045E4E601FD4A5C700175A05 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
+		045E4E621FD4A5FD00175A05 /* Stocks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stocks.storyboard; sourceTree = "<group>"; };
+		045E4E641FD4A66F00175A05 /* CheckOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CheckOut.storyboard; sourceTree = "<group>"; };
 		0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gestIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		142047A368E97DB7353BF627 /* Pods-gestIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.release.xcconfig"; sourceTree = "<group>"; };
 		BED16B8B05670D2A243239D6 /* Pods-gestIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +155,7 @@
 				043DCFED1FC2F00B006880FD /* CategoryApi.swift */,
 				043DCFF51FC2F4A1006880FD /* ProductApi.swift */,
 				045E4E471FCF55A500175A05 /* InvoiceApi.swift */,
+				045E4E541FD4981800175A05 /* StoreApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -148,7 +173,7 @@
 		043DCFE71FC2EEEB006880FD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				043DD00A1FC3854E006880FD /* New Group */,
+				045E4E4D1FD491CB00175A05 /* Stores */,
 				043DD0081FC3822C006880FD /* Categories */,
 				043DD0031FC321EA006880FD /* Invoices */,
 				043DCFF91FC2F525006880FD /* Products */,
@@ -164,6 +189,7 @@
 				043DCFF11FC2F0C4006880FD /* Category.swift */,
 				043DCFF31FC2F3FE006880FD /* Product.swift */,
 				045E4E451FCF548400175A05 /* Invoice.swift */,
+				045E4E521FD4975B00175A05 /* Store.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +216,8 @@
 			children = (
 				043DCFFC1FC2FB4E006880FD /* ProductTableViewCell.swift */,
 				043DD01B1FC730C1006880FD /* NewInvoiceProductTableViewCell.swift */,
+				045E4E4B1FD48A3F00175A05 /* InvoiceTableViewCell.swift */,
+				045E4E561FD49AA400175A05 /* StoreTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -208,6 +236,7 @@
 			children = (
 				043DD0041FC321FB006880FD /* NewInvoiceViewController.swift */,
 				045E4E431FCF44C800175A05 /* CloseInvoiceViewController.swift */,
+				045E4E491FD4870100175A05 /* InvoicesViewController.swift */,
 			);
 			path = Invoices;
 			sourceTree = "<group>";
@@ -224,17 +253,15 @@
 		043DD0091FC38500006880FD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				045E4E641FD4A66F00175A05 /* CheckOut.storyboard */,
+				045E4E621FD4A5FD00175A05 /* Stocks.storyboard */,
+				045E4E601FD4A5C700175A05 /* Scanner.storyboard */,
+				045E4E5E1FD4A56300175A05 /* Invoices.storyboard */,
+				045E4E5C1FD4A3B500175A05 /* Parameters.storyboard */,
 				043BBE501FC2EC6500AF669F /* Main.storyboard */,
 				043BBE551FC2EC6500AF669F /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		043DD00A1FC3854E006880FD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		043DD00F1FC392D6006880FD /* Utils */ = {
@@ -253,6 +280,15 @@
 				043DD0191FC39960006880FD /* HelperService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		045E4E4D1FD491CB00175A05 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				045E4E4E1FD491E800175A05 /* StoresViewController.swift */,
+				045E4E501FD4920400175A05 /* StoreFormViewController.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		9DE74F74203CE1E461399F30 /* Frameworks */ = {
@@ -334,10 +370,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045E4E651FD4A66F00175A05 /* CheckOut.storyboard in Resources */,
 				043BBE571FC2EC6500AF669F /* LaunchScreen.storyboard in Resources */,
 				043BBE541FC2EC6500AF669F /* Assets.xcassets in Resources */,
+				045E4E5D1FD4A3B500175A05 /* Parameters.storyboard in Resources */,
 				043BBE521FC2EC6500AF669F /* Main.storyboard in Resources */,
+				045E4E5F1FD4A56300175A05 /* Invoices.storyboard in Resources */,
+				045E4E611FD4A5C700175A05 /* Scanner.storyboard in Resources */,
 				043DCFEA1FC2EF4F006880FD /* GoogleService-Info.plist in Resources */,
+				045E4E631FD4A5FD00175A05 /* Stocks.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,9 +437,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045E4E4F1FD491E800175A05 /* StoresViewController.swift in Sources */,
 				043DD0071FC32E48006880FD /* ProductFormViewController.swift in Sources */,
 				043DCFF01FC2F092006880FD /* HomeViewController.swift in Sources */,
+				045E4E571FD49AA400175A05 /* StoreTableViewCell.swift in Sources */,
+				045E4E4A1FD4870100175A05 /* InvoicesViewController.swift in Sources */,
 				043DD0051FC321FB006880FD /* NewInvoiceViewController.swift in Sources */,
+				045E4E551FD4981800175A05 /* StoreApi.swift in Sources */,
 				043DCFEE1FC2F00B006880FD /* CategoryApi.swift in Sources */,
 				043DD01A1FC39960006880FD /* HelperService.swift in Sources */,
 				045E4E481FCF55A500175A05 /* InvoiceApi.swift in Sources */,
@@ -409,13 +454,16 @@
 				043BBE4F1FC2EC6500AF669F /* ViewController.swift in Sources */,
 				045E4E441FCF44C800175A05 /* CloseInvoiceViewController.swift in Sources */,
 				043DD0111FC392F0006880FD /* Extentions.swift in Sources */,
+				045E4E531FD4975B00175A05 /* Store.swift in Sources */,
 				043DD00E1FC3859C006880FD /* CategoryFormViewController.swift in Sources */,
 				045E4E461FCF548400175A05 /* Invoice.swift in Sources */,
 				043DD01C1FC730C1006880FD /* NewInvoiceProductTableViewCell.swift in Sources */,
 				043BBE4D1FC2EC6500AF669F /* AppDelegate.swift in Sources */,
+				045E4E4C1FD48A3F00175A05 /* InvoiceTableViewCell.swift in Sources */,
 				043DCFF21FC2F0C4006880FD /* Category.swift in Sources */,
 				043DD0131FC394EB006880FD /* CategoryListCollectionViewCell.swift in Sources */,
 				043DCFF81FC2F51F006880FD /* ProductsViewController.swift in Sources */,
+				045E4E511FD4920400175A05 /* StoreFormViewController.swift in Sources */,
 				043DCFFD1FC2FB4E006880FD /* ProductTableViewCell.swift in Sources */,
 				043DD0001FC31673006880FD /* CategoryCollectionViewCell.swift in Sources */,
 				043DD0181FC397D7006880FD /* Config.swift in Sources */,
