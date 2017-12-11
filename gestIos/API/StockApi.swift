@@ -20,9 +20,11 @@ class StockApi  {
             with : { (snapshot) in
                 print("snapshot \(snapshot.value)" )
                 
-                if let data = snapshot.value as? Int{
+                if let data = snapshot.value as? Int {
                     print(data )
                     onSuccess(data)
+                } else {
+                    onSuccess (0)
                 }
         })
     }
@@ -91,6 +93,18 @@ class StockApi  {
         }
     }
     
+    func createStoreStock( storeId id : String ) {
+        Api.Product.observeProductsWithoutStock(onSuccess: { product in
+            self.REF_STOCK.child(id).child(product.id!).setValue(["stock" : 0 ])
+        })
+        
+    }
+    
+    func newProduct( productId id : String ){
+        Api.Store.observeStores(onSuccess: { store in
+            Api.Stock.REF_STOCK.child(store.id!).child(id).setValue(["stock" : 0 ])
+        })
+    }
     
     
 }

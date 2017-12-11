@@ -54,10 +54,7 @@ class ProductFormViewController : UIViewController {
             let price : Int = Int(priceLabel.text!)!
             Api.Product.createProduct(key : productId! ,name: nameLabel.text!, price : price ,  imageData : imageData,  onSuccess: {
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let categoryListVC = storyboard.instantiateViewController(withIdentifier: "CategoryListViewController") as! CategoryListViewController
-                
-                self.navigationController?.pushViewController(categoryListVC, animated: true)
+                 _ = self.navigationController?.popViewController(animated: true)
             })
         }
     }

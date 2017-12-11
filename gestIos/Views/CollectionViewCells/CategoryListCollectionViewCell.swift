@@ -24,7 +24,8 @@ class CategoryListCollectionViewCell: UICollectionViewCell {
     func setupCategoryInfo( ) {
         if let imageUrlString = category?.imageUrl {
             let imageUrl = URL(string : imageUrlString)
-            categoryImageView.sd_setImage(with: imageUrl)
+
+            categoryImageView.sd_setImage(with: imageUrl! )
             nameLabel.text = category?.name
         }
     }

@@ -29,12 +29,14 @@ class ProductsViewController: UIViewController {
         tableView.dataSource = self
         collectionView.dataSource = self
         
-
-        // Get all product
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        products.removeAll()
         loadProducts( )
         loadCategories( )
         loadStore( )
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +45,7 @@ class ProductsViewController: UIViewController {
     }
 
     func loadProducts( ) {
-        Api.Product.observeProducts( onSuccess : { product in
+        Api.Product.observeProductsWithStock( onSuccess : { product in
             //
             self.products.insert(product, at: 0)
             self.tableView.reloadData( )
@@ -97,7 +99,7 @@ extension ProductsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! ProductTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
             
             let index = indexPath.row
             let product = products[index]

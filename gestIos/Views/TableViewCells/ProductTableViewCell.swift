@@ -43,6 +43,7 @@ class ProductTableViewCell: UITableViewCell {
             let photoUrl = URL(string: imageUrlString)
             productImageView.sd_setImage(with: photoUrl, placeholderImage: UIImage(named: "placeholderImg"))
             nameLabel.text = "\(product!.name!)"
+            stockCountLabel.text = "\(product!.stock!)"
         }
     }
     

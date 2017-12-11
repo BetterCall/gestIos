@@ -134,7 +134,7 @@ class NewInvoiceViewController: UIViewController, AVCaptureMetadataOutputObjects
     }
     
     func findProduct( id: String ) {
-        Api.Product.observeProduct(withId: id, onSuccess: { product in
+        Api.Product.observeProductWithStock(withId: id, onSuccess: { product in
             //self.updateProductInfo(product: product)
          
             print("PRODUCT FOUND")

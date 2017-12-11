@@ -104,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/Controllers/Products/ProductScanViewController.swift"
-            timestampString = "534086615.898195"
+            timestampString = "534154142.177199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -136,7 +136,7 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534078875.257654"
+                  timestampString = "534153280.220805"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -151,7 +151,7 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534078875.260048"
+                  timestampString = "534153280.222181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -200,7 +200,7 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534078875.275469"
+                  timestampString = "534153280.22873"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -215,7 +215,7 @@
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Controllers/Stores/StoresViewController.swift"
-                  timestampString = "534078875.277712"
+                  timestampString = "534153280.230181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -248,12 +248,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898447"
+            timestampString = "534154142.177359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -264,12 +264,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898495"
+            timestampString = "534154142.17744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -280,12 +280,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898539"
+            timestampString = "534154142.177529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -296,42 +296,42 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898583"
+            timestampString = "534154142.17763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProductWithStock(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
-                  timestampString = "534078875.292221"
+                  timestampString = "534153280.245355"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "1740">
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "1744">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  symbolName = "function signature specialization &lt;Arg[1] = Value Promoted from Box&gt; of closure #1 (Swift.Int) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProductWithStock(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
-                  timestampString = "534078875.294008"
+                  timestampString = "534153280.246691"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
@@ -344,75 +344,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898629"
+            timestampString = "534154142.177749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898674"
+            timestampString = "534154142.177839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898719"
+            timestampString = "534154142.177904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProductWithStock(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
-                  timestampString = "534078754.079192"
+                  timestampString = "534153280.255799"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "2064">
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "2112">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProduct(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  symbolName = "function signature specialization &lt;Arg[1] = Value Promoted from Box&gt; of closure #1 (Swift.Int) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.ProductApi.observeProductWithStock(withId: Swift.String, onSuccess: (gestIos.Product) -&gt; (), onError: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "gestIos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/ProductApi.swift"
-                  timestampString = "534078754.080701"
+                  timestampString = "534153280.25717"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "104">
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "152">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -424,12 +424,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898764"
+            timestampString = "534154142.177964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -440,12 +440,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.89881"
+            timestampString = "534154142.178022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -456,12 +456,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.898854"
+            timestampString = "534154142.178079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -472,12 +472,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/ProductApi.swift"
-            timestampString = "534086615.8989"
+            timestampString = "534154142.178138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "observeProduct(withId:onSuccess:onError:)"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "observeProductWithStock(withId:onSuccess:onError:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -516,11 +516,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/StockApi.swift"
-            timestampString = "534086615.898948"
+            timestampString = "534154142.178199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/StockApi.swift"
-            timestampString = "534086615.898994"
+            timestampString = "534154142.178266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "observeStock(storeId:productId:onSuccess:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -552,7 +552,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gestIos/API/StockApi.swift"
-            timestampString = "534086615.899041"
+            timestampString = "534154142.178366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -575,6 +575,180 @@
             endingLineNumber = "8"
             landmarkName = "unknown"
             landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534154142.178483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "observeStock(storeId:productId:onSuccess:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534154142.178552"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "observeStock(storeId:productId:onSuccess:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.StockApi.observeStock(storeId: Swift.String, productId: Swift.String, onSuccess: (Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/StockApi.swift"
+                  timestampString = "534153280.272343"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in gestIos.StockApi.observeStock(storeId: Swift.String, productId: Swift.String, onSuccess: (Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/API/StockApi.swift"
+                  timestampString = "534153280.273709"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534154142.178617"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "observeStock(storeId:productId:onSuccess:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/API/StockApi.swift"
+            timestampString = "534154142.178681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "createStoreStock(storeId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gestIos/Views/CollectionViewCells/CategoryListCollectionViewCell.swift"
+            timestampString = "534154142.178744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "CategoryListCollectionViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.CategoryListCollectionViewCell.categoryImageView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Views/CollectionViewCells/CategoryListCollectionViewCell.swift"
+                  timestampString = "534153280.280337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.CategoryListCollectionViewCell.categoryImageView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Views/CollectionViewCells/CategoryListCollectionViewCell.swift"
+                  timestampString = "534153280.28178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.CategoryListCollectionViewCell.init(frame: __C.CGRect) -&gt; gestIos.CategoryListCollectionViewCell"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Views/CollectionViewCells/CategoryListCollectionViewCell.swift"
+                  timestampString = "534153280.283099"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gestIos.CategoryListCollectionViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;gestIos.CategoryListCollectionViewCell&gt;"
+                  moduleName = "gestIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/projets/gestIos/gestIos/Views/CollectionViewCells/CategoryListCollectionViewCell.swift"
+                  timestampString = "534153280.284555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

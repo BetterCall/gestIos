@@ -19,17 +19,18 @@ class StoreApi  {
     func getStoreId ( ) -> String {
         return KeychainWrapper.standard.string(forKey: "storeSelectedId")!
     }
-    func createCategory ( name : String,  imageData : Data  , onSuccess : @escaping( )-> Void   ) {
+    
+    func createStore ( name : String, address : String , city : String , postalCode : String  , onSuccess : @escaping( String )-> Void   ) {
         // Get a key for a new Category.
-        StorageService.uploadDataToServer(folder: "categories", imageData: imageData, onSuccess: {imageUrl in
-            let  newCategoryKey = self.REF_STORES.childByAutoId().key
-            self.REF_STORES.child(newCategoryKey).setValue([
-                "name" : name ,
-                "imageUrl" : imageUrl
-                ])
-        })
+        let  newStoreKey = self.REF_STORES.childByAutoId().key
+        self.REF_STORES.child(newStoreKey).setValue([
+            "name"            : name ,
+            "address"        : address ,
+            "city"               :  city ,
+            "postalCode"  : postalCode
+            ])
         
-        onSuccess( )
+        onSuccess( newStoreKey  )
     }
     
     func observeCurrentStore( onSuccess : @escaping (Store) -> Void , onError : @escaping (String) -> Void  ) {

@@ -148,7 +148,7 @@ class ProductScanViewController: UIViewController , AVCaptureMetadataOutputObjec
     }
     
     func findProduct( id: String ) {
-        Api.Product.observeProduct(withId: id, onSuccess: { product in
+        Api.Product.observeProductWithStock(withId: id, onSuccess: { product in
             self.product = product
             self.updateProductInfo(product: product)
             //self.continueButton.isHidden = false
