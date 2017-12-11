@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+protocol CategoryListCollectionViewCellDelegate {
+    func selectCategoryId( categoryId : String)
+    //func goToProfileVC (userId : String )
+}
+
+
 class CategoryListCollectionViewCell: UICollectionViewCell {
     
     // Outlets
@@ -20,6 +27,8 @@ class CategoryListCollectionViewCell: UICollectionViewCell {
             setupCategoryInfo( )
         }
     }
+    
+    var delegate : CategoryListCollectionViewCellDelegate?
    
     func setupCategoryInfo( ) {
         if let imageUrlString = category?.imageUrl {
@@ -27,6 +36,17 @@ class CategoryListCollectionViewCell: UICollectionViewCell {
 
             categoryImageView.sd_setImage(with: imageUrl! )
             nameLabel.text = category?.name
+        }
+        // add cell touch gesture recognizer
+        let tapGestureForCell = UITapGestureRecognizer(target: self, action: #selector(self.cell_TouchUpInside))
+        addGestureRecognizer(tapGestureForCell)
+        isUserInteractionEnabled = true
+        
+    }
+    
+    @objc func cell_TouchUpInside( ) {
+        if let id = category?.id {
+            delegate?.selectCategoryId(categoryId: id)
         }
     }
     

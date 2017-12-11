@@ -17,18 +17,20 @@ class ProductApi  {
     var REF_PRODUCT = Database.database().reference().child("products")
     
     
-    func createProduct ( key : String , name : String, price : Int , imageData : Data  , onSuccess : @escaping( )-> Void   ) {
+    func createProduct ( key : String , name : String, price : Int , imageData : Data  , categories : [String : Bool ] , onSuccess : @escaping( )-> Void   ) {
         // Get a key for a new Category.
         StorageService.uploadDataToServer(folder: "products", imageData: imageData, onSuccess: {imageUrl in
             
             let product = [
                 "name" : name ,
                 "price" : price ,
-                "imageUrl" : imageUrl
+                "imageUrl" : imageUrl ,
+                "categories" : categories
                 ] as [String : Any]
            
             self.REF_PRODUCT.child(key).setValue(product)
             Api.Stock.newProduct(productId: key)
+            Api.CategoryProduct.addProductToCategory( productId : key , categories : categories)
         })
         
         onSuccess( )

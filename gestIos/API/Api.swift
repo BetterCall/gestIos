@@ -14,6 +14,7 @@ struct Api  {
     static var Category = CategoryApi( )
     static var Invoice = InvoiceApi( )
     static var Store = StoreApi ( )
-    static var Stock = StockApi ( ) 
+    static var Stock = StockApi ( )
+    static var CategoryProduct = CategoryProductApi( )  
 
 }

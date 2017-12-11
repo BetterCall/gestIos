@@ -52,7 +52,7 @@ extension StoresViewController : UITableViewDataSource {
             
             let index = indexPath.row
             cell.store = stores[index]
-            
+            cell.detailTextLabel?.text = "choisir"
             //cell.delegate = self
             
             return cell
@@ -62,11 +62,20 @@ extension StoresViewController : UITableViewDataSource {
 
 extension StoresViewController : UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            Api.Store.setCurrentStore(storeId: stores[indexPath.row].id!)
+           Api.Store.setCurrentStore(storeId: stores[indexPath.row].id!)
         }
     }
+    
+  
+
 }
 
 

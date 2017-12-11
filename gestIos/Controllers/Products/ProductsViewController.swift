@@ -12,6 +12,7 @@ class ProductsViewController: UIViewController {
     
     var products =  [Product]( )
     var categories = [Category]( )
+    var categoriesSelected = [String : Bool]( )
     var store : Store? {
         didSet {
             self.title = store?.name
@@ -50,14 +51,7 @@ class ProductsViewController: UIViewController {
             self.products.insert(product, at: 0)
             self.tableView.reloadData( )
             
-            guard let categoryId = product.categoryId else {
-                return
-            }
-            // Get product category with category id
-            Api.Category.observeCategory(withId: categoryId, onSuccess: { cat in
-                product.category = cat
-            
-            })
+          
             
         })
     }
@@ -140,6 +134,7 @@ extension ProductsViewController :UICollectionViewDataSource {
         
         let index = indexPath.row
         cell.category = categories[index]
+        cell.delegate = self
         //cell.mediaImageView.image = UIImage(named: "facebook")
         //cell.post = post
         
@@ -148,5 +143,60 @@ extension ProductsViewController :UICollectionViewDataSource {
     }
     
 }
+
+extension ProductsViewController : CategoryCollectionViewCellDelegate {
     
+    func selectCategoryId(categoryId: String , action : Bool) {
+        print("cclikeed")
+        
+        if categoriesSelected.isEmpty{
+            self.products.removeAll()
+            self.tableView.reloadData()
+        }
+        
+        // add product to list
+        if action {
+            Api.CategoryProduct.observeProduct(categoryId: categoryId, onSuccess: { product in
+                self.products.append(product)
+                self.tableView.reloadData()
+                self.categoriesSelected[categoryId] = true
+            })
+            
+        } else { // remove product to list
+            
+            var index = [Int]( )
+            for (i , product )  in products.enumerated() {
+                if product.categories?[categoryId] != nil {
+                    index.insert(i, at: 0)
+                    
+                    self.categoriesSelected[categoryId] = nil
+                }
+            }
+            for i in index{
+                products.remove(at: i)
+                self.tableView.reloadData()
+            }
+            
+            if products.isEmpty {
+                loadProducts()
+            }
+        }
+        
+       
+        
+      
+    }
+        
+        /*
+         let storyboard = UIStoryboard(name: "Home", bundle: nil)
+         let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+         detailVC.user = user
+         detailVC.post = post
+         
+         navigationController?.pushViewController(detailVC, animated: true)
+         */
+}
+    
+
+
 

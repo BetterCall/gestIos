@@ -50,6 +50,7 @@
 		045E4E651FD4A66F00175A05 /* CheckOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E4E641FD4A66F00175A05 /* CheckOut.storyboard */; };
 		045E4E681FD5448400175A05 /* StoreCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045E4E661FD5448400175A05 /* StoreCoreData.xcdatamodeld */; };
 		0461590D1FD55C8600590C55 /* StockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461590C1FD55C8600590C55 /* StockApi.swift */; };
+		04FE53FF1FDE9E040092B61B /* CategoryProductApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE53FE1FDE9E040092B61B /* CategoryProductApi.swift */; };
 		3EA8E91B9FD25EC1B3636B2B /* Pods_gestIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		045E4E641FD4A66F00175A05 /* CheckOut.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CheckOut.storyboard; sourceTree = "<group>"; };
 		045E4E671FD5448400175A05 /* StoreCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoreCoreData.xcdatamodel; sourceTree = "<group>"; };
 		0461590C1FD55C8600590C55 /* StockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockApi.swift; sourceTree = "<group>"; };
+		04FE53FE1FDE9E040092B61B /* CategoryProductApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductApi.swift; sourceTree = "<group>"; };
 		0FB2CB21CA7830938449F471 /* Pods_gestIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gestIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		142047A368E97DB7353BF627 /* Pods-gestIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.release.xcconfig"; sourceTree = "<group>"; };
 		BED16B8B05670D2A243239D6 /* Pods-gestIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gestIos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gestIos/Pods-gestIos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				045E4E471FCF55A500175A05 /* InvoiceApi.swift */,
 				045E4E541FD4981800175A05 /* StoreApi.swift */,
 				0461590C1FD55C8600590C55 /* StockApi.swift */,
+				04FE53FE1FDE9E040092B61B /* CategoryProductApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045E4E4F1FD491E800175A05 /* StoresViewController.swift in Sources */,
+				04FE53FF1FDE9E040092B61B /* CategoryProductApi.swift in Sources */,
 				043DD0071FC32E48006880FD /* ProductFormViewController.swift in Sources */,
 				043DCFF01FC2F092006880FD /* HomeViewController.swift in Sources */,
 				045E4E571FD49AA400175A05 /* StoreTableViewCell.swift in Sources */,

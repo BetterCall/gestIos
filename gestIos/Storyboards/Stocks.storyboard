@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,20 +54,35 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ngy-VG-xxl">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-C9-sLH">
                                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="90" id="6bF-E8-Mij"/>
+                                                                            <constraint firstAttribute="width" constant="90" id="CZN-i8-rGn"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ngy-VG-xxl">
+                                                                        <rect key="frame" x="2.5" y="2.5" width="85" height="85"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="85" id="4LH-h7-GmK"/>
+                                                                            <constraint firstAttribute="height" constant="85" id="I9n-DS-f9s"/>
+                                                                        </constraints>
                                                                     </imageView>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstItem="Ngy-VG-xxl" firstAttribute="top" secondItem="mq4-xU-gBB" secondAttribute="top" id="8ek-8U-9Fn"/>
-                                                                <constraint firstItem="Ngy-VG-xxl" firstAttribute="leading" secondItem="mq4-xU-gBB" secondAttribute="leading" id="NYd-lz-4Wc"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Ngy-VG-xxl" secondAttribute="trailing" id="nox-ab-WFZ"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Ngy-VG-xxl" secondAttribute="bottom" id="tlm-Ii-MyJ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="HBr-C9-sLH" secondAttribute="trailing" id="1gJ-ng-tsa"/>
+                                                                <constraint firstItem="HBr-C9-sLH" firstAttribute="top" secondItem="mq4-xU-gBB" secondAttribute="top" id="HaH-mn-mox"/>
+                                                                <constraint firstAttribute="bottom" secondItem="HBr-C9-sLH" secondAttribute="bottom" id="Z4b-Yy-38f"/>
+                                                                <constraint firstItem="HBr-C9-sLH" firstAttribute="leading" secondItem="mq4-xU-gBB" secondAttribute="leading" id="t4j-24-jIT"/>
+                                                                <constraint firstItem="Ngy-VG-xxl" firstAttribute="centerY" secondItem="mq4-xU-gBB" secondAttribute="centerY" id="wB3-hi-E4G"/>
+                                                                <constraint firstItem="Ngy-VG-xxl" firstAttribute="centerX" secondItem="mq4-xU-gBB" secondAttribute="centerX" id="yUX-r0-AEc"/>
                                                             </constraints>
                                                             <size key="customSize" width="90" height="90"/>
                                                             <connections>
                                                                 <outlet property="categoryImageView" destination="Ngy-VG-xxl" id="cMK-Hc-r9g"/>
+                                                                <outlet property="selectedView" destination="HBr-C9-sLH" id="8BC-h0-P9W"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -84,6 +99,12 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-H9-vEr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stocks" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKv-SC-NaP">
+                                                    <rect key="frame" x="276" y="54" width="79" height="36"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="26"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock" translatesAutoresizingMaskIntoConstraints="NO" id="4Av-1T-k0v">
                                                     <rect key="frame" x="20" y="27" width="90" height="90"/>
                                                     <constraints>
@@ -91,12 +112,6 @@
                                                         <constraint firstAttribute="width" constant="90" id="vHT-BV-9BG"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stocks" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKv-SC-NaP">
-                                                    <rect key="frame" x="276" y="54" width="79" height="36"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="26"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.00083425856428220868" green="0.70604753494262695" blue="0.66943854093551636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>

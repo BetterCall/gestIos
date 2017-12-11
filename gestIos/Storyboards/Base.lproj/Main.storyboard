@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qJf-Zo-Hud">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qJf-Zo-Hud">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,20 +277,31 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-g9-zDf">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZD-o8-8nI">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-g9-zDf">
+                                                            <rect key="frame" x="2.5" y="2.5" width="85" height="85"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="85" id="Dg9-VO-bOf"/>
+                                                                <constraint firstAttribute="height" constant="85" id="RZl-fO-CAD"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="dIi-g9-zDf" firstAttribute="top" secondItem="Azc-h4-FYF" secondAttribute="top" id="Ibg-cc-gC0"/>
-                                                    <constraint firstAttribute="bottom" secondItem="dIi-g9-zDf" secondAttribute="bottom" id="hbe-mL-zDb"/>
-                                                    <constraint firstItem="dIi-g9-zDf" firstAttribute="leading" secondItem="Azc-h4-FYF" secondAttribute="leading" id="qqo-Rv-cnD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dIi-g9-zDf" secondAttribute="trailing" id="xLE-7t-ghT"/>
+                                                    <constraint firstItem="dIi-g9-zDf" firstAttribute="centerY" secondItem="Azc-h4-FYF" secondAttribute="centerY" id="2GI-z9-oqc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hZD-o8-8nI" secondAttribute="bottom" id="8KQ-Dq-QeQ"/>
+                                                    <constraint firstItem="hZD-o8-8nI" firstAttribute="leading" secondItem="Azc-h4-FYF" secondAttribute="leading" id="AWB-AA-mif"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hZD-o8-8nI" secondAttribute="trailing" id="M5B-ge-Fea"/>
+                                                    <constraint firstItem="dIi-g9-zDf" firstAttribute="centerX" secondItem="Azc-h4-FYF" secondAttribute="centerX" id="las-JR-fuw"/>
+                                                    <constraint firstItem="hZD-o8-8nI" firstAttribute="top" secondItem="Azc-h4-FYF" secondAttribute="top" id="wZc-zC-nn0"/>
                                                 </constraints>
                                                 <size key="customSize" width="90" height="90"/>
                                                 <connections>
                                                     <outlet property="categoryImageView" destination="dIi-g9-zDf" id="QkT-uF-KTE"/>
+                                                    <outlet property="selectedView" destination="hZD-o8-8nI" id="iMf-L3-zCv"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -310,15 +321,6 @@
                                     <constraint firstAttribute="trailing" secondItem="rFq-LC-Lu3" secondAttribute="trailing" id="zAo-8b-QW8"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom du Produit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioL-53-jS0">
-                                <rect key="frame" x="70.5" y="428" width="235" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="87A-ZS-UyP"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-d6-8FX">
                                 <rect key="frame" x="70.5" y="446" width="235" height="1"/>
                                 <color key="backgroundColor" red="0.63319227430555558" green="0.73060438368055558" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -352,6 +354,15 @@
                                     <constraint firstAttribute="height" constant="1" id="d43-Fj-vsm"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom du Produit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioL-53-jS0">
+                                <rect key="frame" x="70" y="430" width="235" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="87A-ZS-UyP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -384,6 +395,7 @@
                         <viewLayoutGuide key="safeArea" id="gWp-Cv-Qcp"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="rFq-LC-Lu3" id="EwE-8s-Iu2"/>
                         <outlet property="nameLabel" destination="ioL-53-jS0" id="ZSy-R4-M1r"/>
                         <outlet property="priceLabel" destination="YWR-JJ-GAq" id="5Al-yj-Waz"/>
                         <outlet property="productImageView" destination="wLj-qS-tdw" id="CUI-It-24j"/>
